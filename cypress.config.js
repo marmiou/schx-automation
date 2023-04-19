@@ -10,6 +10,7 @@ module.exports = defineConfig({
   //   saveAllAttempts: false,
   // },
   e2e: {
+    baseUrl: "http://qatest.schoox.com",
     watchForFileChanges: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here

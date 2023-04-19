@@ -1,6 +1,6 @@
 export default class LoginPage {
     //elements
-    URL = "http://qatest.schoox.com/login"
+    URL = Cypress.config().baseUrl + "/login"
     HEADER = "h2"
     EMAIL_FIELD = "input[type=email]"
     PASSWORD_FIELD = "input[type=password]"

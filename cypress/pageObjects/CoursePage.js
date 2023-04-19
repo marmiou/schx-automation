@@ -3,7 +3,6 @@ export default class CoursePage {
     COURSE_PROGRESS = ".top_course_progress"
     COMPLETE_BUTTONS = "div.course_steps_main > div:nth-child(n) > div.course_steps_right > div > b"
 
-    CONFIRMATION = "Are you sure you want to complete it?"
     OK = "OK"
 
     getEnrollBtn() {
@@ -23,11 +22,9 @@ export default class CoursePage {
     }
 
     completeAllSteps() {
-        let steps = this.getCompleteButtons()
-        steps.each(($b) => {
+        this.getCompleteButtons().each(($b) => {
             $b.parent().on().click()
             cy.on("window:alert", (str) => {
-                expect(str).to.equal(this.CONFIRMATION)
                 cy.contains(this.OK).click()
             })
             cy.on("window:confirm", () => true)

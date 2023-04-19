@@ -1,12 +1,15 @@
 import LoginPage from "../pageObjects/LoginPage"
 import MainPage from "../pageObjects/MainPage"
 import TrainingPage from "../pageObjects/TrainingPage"
-import CoursePage from "../pageObjects/CoursePage";
+import CoursePage from "../pageObjects/CoursePage"
 
-let loginPage = new LoginPage()
-let mainPage = new MainPage()
 
 describe("Test QA for Schx", () => {
+
+    let loginPage = new LoginPage()
+    let mainPage = new MainPage()
+    let trainingPage = new TrainingPage()
+
     beforeEach(() => {
         loginPage.navigate()
         loginPage.getHeader().should("contain.text", "Log in Here")
@@ -16,7 +19,6 @@ describe("Test QA for Schx", () => {
     })
 
     it("Should display QA category to contain only the given list of items", () => {
-        let trainingPage = new TrainingPage()
         trainingPage.clickCategoryElementByText("QA")
         cy.wrap(trainingPage.getCoursesTitles()).should("deep.equal", [
             "QA course",
@@ -27,7 +29,6 @@ describe("Test QA for Schx", () => {
     })
 
     it("Should have 100% progress for completed course", () => {
-        let trainingPage = new TrainingPage()
         let coursePage = new CoursePage()
         trainingPage.clickCourseWithTitle("Μάθημα για automation")
         coursePage.enroll()

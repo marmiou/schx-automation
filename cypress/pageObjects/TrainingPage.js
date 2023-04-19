@@ -19,7 +19,7 @@ export default class TrainingPage {
     }
 
     getCoursesTitles() {
-        const titles = []
+        let titles = []
         this.getCoursesTable()
             .each(($b) => titles.push($b.text()))
         return titles
