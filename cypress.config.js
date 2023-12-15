@@ -12,8 +12,11 @@ module.exports = defineConfig({
   video: true,
   reporterOptions: {
     reportDir: 'reports/mochawesome'},
+  {
+  screenshotsFolder: 'cypress/screenshots'
+  }
   e2e: {
-    baseUrl: "http://qatest.schoox.com",
+    baseUrl: 'http://qatest.schoox.com',
     watchForFileChanges: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
