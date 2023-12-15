@@ -1,7 +1,6 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  reporter: 'cypress-mochawesome-reporter',
   // reporterOptions: {
   //   charts: true,
   //   reportPageTitle: 'custom-title',
@@ -9,6 +8,10 @@ module.exports = defineConfig({
   //   inlineAssets: true,
   //   saveAllAttempts: false,
   // },
+  reporter: '../node_modules/cypress-mochawesome-reporter',
+    video: true,
+    reporterOptions: {
+        reportDir: 'reports/mochawesome',
   e2e: {
     baseUrl: "http://qatest.schoox.com",
     watchForFileChanges: false,
