@@ -1,6 +1,7 @@
 # schx-automation
 <h1 align="center">Web Automation with Cypress</h1>
 
+
 ## Links
 
 - [Repo](https://github.com/marmiou/schx-automation "Automation with Cypress repo")
