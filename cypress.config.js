@@ -12,9 +12,7 @@ module.exports = defineConfig({
   video: true,
   reporterOptions: {
     reportDir: 'reports/mochawesome'},
-  {
-  screenshotsFolder: 'cypress/screenshots'
-  }
+  screenshotsFolder: 'cypress/screenshots',
   e2e: {
     baseUrl: 'http://qatest.schoox.com',
     watchForFileChanges: false,
