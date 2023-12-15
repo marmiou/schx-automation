@@ -8,10 +8,10 @@ module.exports = defineConfig({
   //   inlineAssets: true,
   //   saveAllAttempts: false,
   // },
-  reporter: '../node_modules/cypress-mochawesome-reporter',
-    video: true,
-    reporterOptions: {
-        reportDir: 'reports/mochawesome',
+  reporter: 'cypress-mochawesome-reporter',
+  video: true,
+  reporterOptions: {
+    reportDir: 'reports/mochawesome'},
   e2e: {
     baseUrl: "http://qatest.schoox.com",
     watchForFileChanges: false,
